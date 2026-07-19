@@ -36,4 +36,4 @@ datasets/rab-samples/*
 !datasets/drawings/.gitkeep
 !datasets/rab-samples/.gitkeep
 
-.claude
+.claude/
