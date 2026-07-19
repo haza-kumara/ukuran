@@ -1,4 +1,7 @@
+
 from functools import lru_cache
+
+# pyrefly: ignore [missing-import]
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -10,7 +13,6 @@ class Settings(BaseSettings):
 
     frontend_url: str = "http://localhost:3000"
 
-    # Untuk digunakan backend pada tahap berikutnya.
     supabase_url: str = ""
     supabase_publishable_key: str = ""
     supabase_service_role_key: str = ""
