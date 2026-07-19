@@ -3,8 +3,12 @@ from typing import Literal
 from fastapi import APIRouter
 from pydantic import BaseModel
 
+from app.core.config import get_settings
+
 
 router = APIRouter(tags=["Health"])
+
+settings = get_settings()
 
 
 class HealthResponse(BaseModel):
@@ -22,5 +26,5 @@ async def health_check() -> HealthResponse:
     return HealthResponse(
         status="healthy",
         service="ukuran-api",
-        version="0.1.0",
+        version=settings.app_version,
     )

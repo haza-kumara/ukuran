@@ -6,6 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     app_name: str = "ukuran API"
     app_env: str = "development"
+    app_version: str = "0.1.0"
     api_prefix: str = "/api/v1"
 
     frontend_url: str = "http://localhost:3000"

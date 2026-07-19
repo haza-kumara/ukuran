@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Bash(proxy)",
-      "Bash(\\\\.env\")"
+      "Bash(\\\\.env\")",
+      "Bash(node -e \"const l=require\\('./package-lock.json'\\); console.log\\('@supabase/ssr:', l.packages['node_modules/@supabase/ssr']?.version\\); console.log\\('@supabase/supabase-js:', l.packages['node_modules/@supabase/supabase-js']?.version\\)\")",
+      "Bash(node *)",
+      "Bash(./node_modules/.bin/next lint *)",
+      "Bash(npx *)"
     ]
   }
 }
