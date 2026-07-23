@@ -17,6 +17,10 @@ class Settings(BaseSettings):
     supabase_publishable_key: str = ""
     supabase_service_role_key: str = ""
 
+    database_url: str = ""
+
+    supabase_jwt_secret: str = ""
+
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",
